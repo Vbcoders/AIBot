@@ -45,10 +45,11 @@
     }); 
    let data = await response.text(); 
    let voiceout = JSON.parse(data);
-    console.log(voiceout.message);
+    if(voiceout.warning=='No warning'){
     document.getElementById("show").innerHTML = "<b>Assistant</b> :"+ voiceout.message; 
    responsiveVoice.speak(voiceout.message, "US English Female");
          } 
+        }
          fetchText(); 
        }
     } 
