@@ -48,7 +48,6 @@
     console.log(voiceout.message);
     document.getElementById("show").innerHTML = "<b>Assistant</b> :"+ voiceout.message; 
    responsiveVoice.speak(voiceout.message, "US English Female");
-     recognition.stop();
          } 
          fetchText(); 
        }
@@ -56,9 +55,6 @@
  } 
    function startButton(event) { 
    recognition.start();
-   recognition.addEventListener('end',()=>{
-      recognition.start();
-       });
     } 
      </script> 
      <div class="container">
