@@ -11,9 +11,9 @@
    <body> 
      <div class="container">
       <br>
-      <img src="ai-generated-7760505_960_720.webp" alt="AI.image">
+      <img onclick="startButton(event)" src="ai-generated-7760505_960_720.webp" alt="AI.image">
      <div id="show"><b></b></div>
-  <i onclick="startButton(event)" class='fa fa-microphone'></i>
+  <i class='fa fa-microphone'></i>
       </div>
       <style>
       .fa{
@@ -101,17 +101,41 @@ font-family: 'Yellowtail', cursive;
     } 
  } 
    function startButton(event) { 
+
    recognition.start();
+
      mic.classList.add('fa-microphone-slash');
+
      mic.style.color='blue';
+
      mic.style.opacity='100%';
+
+     document.querySelector('img').style.boxShadow='2px 2px 20px red';
+
     } 
+
  recognition.addEventListener('end',()=>{
+
    mic.classList.remove('fa-microphone-slash');
+
        mic.style.color='black';
+
        mic.style.opacity='20%';
+
        mic.style.transition='1s';
+
+       document.querySelector('img').style.boxShadow='2px 2px 20px darkgreen';
+
     });
+
+  
+
+ 
+  
+      
+     
+     
+
      </script>
       </body> 
       </html>
